@@ -5,3 +5,8 @@
 # Input: 5
 # Output: 120
 
+factorial = 1
+n = int(input('Введите число: '))
+for i in range(1, n + 1):
+    factorial *= i
+print('Факториал числа', n, 'равен', factorial)
