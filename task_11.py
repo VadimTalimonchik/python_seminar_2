@@ -4,6 +4,7 @@
 # Input: 5
 # Output: 6
 
+# # Вариант 1
 # fib1 = 0
 # fib2 = 1
 
@@ -11,28 +12,28 @@
 # n = input('Номер элемента ряда Фибоначчи: ')
 # n = int(n)
 # fib_sum = 0
-# while fib_sum <= n:
+# while fib_sum < n:
 #     fib_sum = fib1 + fib2
 #     fib1 = fib2
 #     fib2 = fib_sum
 #     i = i + 1
 
-#     if fib_sum == n:
-#         print('Значение этого элемента: ', i)
-#     else:
-#         print(-1)
+# if fib_sum == n:
+#     print('Значение этого элемента: ', i)
+# else:
+#     print(-1)
 
 # -------------------------
 # # Вариант 2
 # x = 0
 # x1 = 1
-# x2 = 1
-# i = 3
+# x2 = 0
+# i = 0
 
 # n = int(input('Введите число: '))
 # while x <= n:
 #     x = x1 + x2
-#     x, x2 = x, x1
+#     x1, x2 = x, x1
 #     i += 1
 
 # if(n == x2):
@@ -41,25 +42,22 @@
 #     print(-1)
 
 # ---------------------
-print("Введите число n:")
-num = int(input())
-
-fib0 = 0
-fib1 = 1
-fib2 = 1
-i = 3
-output = -1
-while fib2 <= num:
-    if fib2 == num:
-        output = i
-    fib2 = fib0 + fib1
-    fib1 = fib2
-    fib0 = fib1
-    # print(i, ":", fib2) # Проверка правильности решения
+# Вариант 3 ???
+n = int(input('Введите число: '))
+n0 = 0
+n1 = 0
+n2 = 1
+i = 2
+while n0 < n:
+    n0 = n1 + n2
+    n1 = n2
+    n2 = n0
     i += 1
-
-print("Input:", num)
-print("Output:", i)
-
-
-# требуется доработка
+    if n0 > n:
+        i = 0
+        if i != 0:
+            print(i)
+        else:
+            print(-1)
+            
+# вариант 3 надо доработать
